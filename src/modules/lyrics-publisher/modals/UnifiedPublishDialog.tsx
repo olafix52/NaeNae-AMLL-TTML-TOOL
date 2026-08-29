@@ -254,15 +254,18 @@ export function UnifiedPublishDialog() {
 							elapsedMs: 0,
 						});
 
-						const nonce = await solveChallenge(
-							challenge,
-							abortController.signal,
-							(attempts, elapsedMs) => {
-								setLrcLibStatus({
-									state: "solving_pow",
-									attempts,
-									elapsedMs,
-								});
+						const token = await solveChallenge(
+							challenge.prefix,
+							challenge.target,
+							{
+								signal: abortController.signal,
+								onProgress: (stats) => {
+									setLrcLibStatus({
+										state: "solving_pow",
+										attempts: stats.attempts,
+										elapsedMs: stats.elapsedMs,
+									});
+								},
 							},
 						);
 
@@ -270,22 +273,24 @@ export function UnifiedPublishDialog() {
 
 						setLrcLibStatus({ state: "publishing" });
 
-						await LrcLibApi.publish({
-							track_name: song.trim(),
-							artist_name: artist.trim(),
-							album_name: album.trim() || undefined,
-							duration: dur,
-							plain_lyrics: lrcLibIncludePlain
-								? generatedPlainText.trim() || undefined
-								: undefined,
-							synced_lyrics: lrcLibIncludeSynced
-								? generatedSyncedLrc.trim() || undefined
-								: undefined,
-							lyricsfile: lrcLibIncludeLyricsfile
-								? generatedLyricsfile.trim() || undefined
-								: undefined,
-							publish_token: `${challenge.prefix}:${nonce}`,
-						});
+						await LrcLibApi.publish(
+							{
+								trackName: song.trim(),
+								artistName: artist.trim(),
+								albumName: album.trim() || undefined,
+								duration: dur,
+								plainLyrics: lrcLibIncludePlain
+									? generatedPlainText.trim() || undefined
+									: undefined,
+								syncedLyrics: lrcLibIncludeSynced
+									? generatedSyncedLrc.trim() || undefined
+									: undefined,
+								lyricsfile: lrcLibIncludeLyricsfile
+									? generatedLyricsfile.trim() || undefined
+									: undefined,
+							},
+							token,
+						);
 
 						setLrcLibStatus({
 							state: "success",
