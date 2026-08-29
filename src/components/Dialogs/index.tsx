@@ -4,6 +4,7 @@ import { GeniusImportLyricsDialog } from "$/modules/genius/modals/GeniusImportLy
 import { GeniusSearchDialog } from "$/modules/genius/modals/GeniusSearchDialog.tsx";
 import { ImportFromLRCLIB } from "$/modules/lrclib/modals/ImportDialog.tsx";
 import { PublishDialog as PublishToLRCLIBDialog } from "$/modules/lrclib/modals/PublishDialog.tsx";
+import { UnifiedPublishDialog } from "$/modules/lyrics-publisher/modals/UnifiedPublishDialog.tsx";
 import { UnisonPublishDialog } from "$/modules/unison/modals/PublishDialog.tsx";
 import { GrammarCheckDialog } from "$/modules/lyric-editor/modals/GrammarCheckDialog.tsx";
 import { UrbanDictionaryDialog } from "$/modules/lyric-editor/modals/UrbanDictionaryDialog.tsx";
@@ -56,6 +57,7 @@ export const Dialogs = () => {
 			<LyricsfileConverterDialog />
 			<PublishToLRCLIBDialog />
 			<UnisonPublishDialog />
+			<UnifiedPublishDialog />
 			<ConfirmationDialog />
 			<Mp3ConversionDialog />
 			<HistoryRestoreDialog />

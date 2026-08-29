@@ -519,6 +519,7 @@
 			"restoreFromHistory": "Przywróć z historii…",
 			"saveLyricToClipboard": "Zapisz TTML do schowka",
 			"uploadToAMLLDB": "Wyślij do bazy danych (tylko CN)",
+			"publishUnified": "Publikuj do baz danych (LRCLIB i Unison)...",
 			"publishToLRCLIB": "Wyślij do LRCLIB...",
 			"publishToUnison": "Publikuj do Unison (Better Lyrics)...",
 			"file": "Plik",
@@ -556,6 +557,7 @@
 				"toLrcfySylb": "Eksportuj do Lyricify Syllable",
 				"toASS": "Eksportuj do napisów ASS",
 				"toLyricsfile": "Eksportuj do Lyricsfile (YAML) [BETA]",
+				"publishUnified": "Publikuj do baz danych (LRCLIB i Unison)...",
 				"publishToLRCLIB": "Wyślij do LRCLIB...",
 				"publishToUnison": "Publikuj do Unison (Better Lyrics)..."
 			}
@@ -1358,6 +1360,27 @@
 			"missingMetadata": "Tytuł utworu i wykonawca są wymagane.",
 			"missingDuration": "Wprowadź prawidłowy czas trwania utworu.",
 			"missingLyrics": "Treść tekstu piosenki nie może być pusta."
+		}
+	},
+	"unifiedPublisher": {
+		"dialogTitle": "Publikuj do baz danych (LRCLIB i Unison)",
+		"dialogDescription": "Jednoczesna publikacja zsynchronizowanych tekstów piosenek do baz LRCLIB oraz Unison (Better Lyrics) jednym kliknięciem.",
+		"permanentNote": "Wpisy opublikowane w LRCLIB oraz Unison są publiczne i natychmiast dostępne dla odtwarzaczy.",
+		"batchFinished": "Zakończono wysyłanie. Sprawdź statusy poszczególnych serwisów powyżej.",
+		"publishButton": "Publikuj do wybranych baz danych",
+		"fields": {
+			"song": "Tytuł utworu",
+			"artist": "Wykonawca",
+			"album": "Album",
+			"duration": "Czas trwania (s)",
+			"videoId": "ID wideo YouTube (dla Unison)",
+			"isrc": "ISRC",
+			"language": "Kod języka"
+		},
+		"errors": {
+			"noTargetSelected": "Zaznacz co najmniej jedną docelową bazę danych.",
+			"missingMetadata": "Tytuł utworu i wykonawca są wymagane.",
+			"missingDuration": "Wprowadź prawidłowy czas trwania utworu."
 		}
 	}
 }

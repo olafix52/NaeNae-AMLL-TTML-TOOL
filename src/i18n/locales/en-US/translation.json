@@ -552,6 +552,7 @@
 			"restoreFromHistory": "Restore from history…",
 			"saveLyricToClipboard": "Save TTML to clipboard",
 			"uploadToAMLLDB": "Upload to database (CN only)",
+			"publishUnified": "Publish to Databases (LRCLIB & Unison)...",
 			"publishToLRCLIB": "Publish to LRCLIB...",
 			"publishToUnison": "Publish to Unison (Better Lyrics)...",
 			"file": "File",
@@ -589,6 +590,7 @@
 				"toLrcfySylb": "Export to Lyricify Syllable",
 				"toASS": "Export to ASS subtitles",
 				"toLyricsfile": "Export to Lyricsfile (YAML) [BETA]",
+				"publishUnified": "Publish to Databases (LRCLIB & Unison)...",
 				"publishToLRCLIB": "Publish to LRCLIB...",
 				"publishToUnison": "Publish to Unison (Better Lyrics)..."
 			}
@@ -1433,6 +1435,27 @@
 			"missingMetadata": "Song title and artist name are required.",
 			"missingDuration": "Please specify a valid track duration.",
 			"missingLyrics": "Lyrics content cannot be empty."
+		}
+	},
+	"unifiedPublisher": {
+		"dialogTitle": "Publish Lyrics to Databases (Dual Publisher)",
+		"dialogDescription": "Simultaneously publish your synchronized lyrics to both LRCLIB and the Unison (Better Lyrics) crowdsourced database with one click.",
+		"permanentNote": "Entries published to LRCLIB & Unison are public and immediately available to downstream players.",
+		"batchFinished": "Publishing requests completed. Review service statuses above.",
+		"publishButton": "Publish to Selected Databases",
+		"fields": {
+			"song": "Song Title",
+			"artist": "Artist",
+			"album": "Album",
+			"duration": "Duration (s)",
+			"videoId": "YouTube Video ID (for Unison)",
+			"isrc": "ISRC",
+			"language": "Language Code"
+		},
+		"errors": {
+			"noTargetSelected": "Please select at least one database to publish to.",
+			"missingMetadata": "Song title and artist name are required.",
+			"missingDuration": "Please specify a valid track duration."
 		}
 	}
 }

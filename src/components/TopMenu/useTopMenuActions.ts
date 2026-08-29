@@ -35,6 +35,7 @@ import {
 	metadataEditorDialogAtom,
 	publishToLRCLIBDialogAtom,
 	publishToUnisonDialogAtom,
+	publishUnifiedDialogAtom,
 	settingsDialogAtom,
 	submitToAMLLDBDialogAtom,
 	spotMatchDialogAtom,
@@ -667,6 +668,10 @@ export const useTopMenuActions = () => {
 		store.set(publishToUnisonDialogAtom, true);
 	}, [store]);
 
+	const onPublishUnified = useCallback(() => {
+		store.set(publishUnifiedDialogAtom, true);
+	}, [store]);
+
 	return {
 		newFileKey,
 		openFileKey,
@@ -689,6 +694,7 @@ export const useTopMenuActions = () => {
 		onSubmitToAMLLDB,
 		onPublishToLRCLIB,
 		onPublishToUnison,
+		onPublishUnified,
 		onUndo,
 		onRedo,
 		onSelectAll,

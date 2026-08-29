@@ -519,6 +519,7 @@
 			"restoreFromHistory": "从历史记录恢复...",
 			"saveLyricToClipboard": "保存 TTML 到剪贴板",
 			"uploadToAMLLDB": "上传到数据库 (仅限 CN)",
+			"publishUnified": "发布到歌词数据库 (LRCLIB & Unison)...",
 			"publishToLRCLIB": "发布到 LRCLIB...",
 			"publishToUnison": "发布到 Unison (Better Lyrics)...",
 			"file": "文件",
@@ -556,6 +557,7 @@
 				"toLrcfySylb": "导出到 Lyricify Syllable",
 				"toASS": "导出到 ASS 字幕",
 				"toLyricsfile": "导出到 Lyricsfile (YAML) [BETA]",
+				"publishUnified": "发布到歌词数据库 (LRCLIB & Unison)...",
 				"publishToLRCLIB": "发布到 LRCLIB...",
 				"publishToUnison": "发布到 Unison (Better Lyrics)..."
 			}
@@ -1355,6 +1357,27 @@
 			"missingMetadata": "歌曲名称和歌手为必填项。",
 			"missingDuration": "请输入有效的歌曲时长。",
 			"missingLyrics": "歌词内容不能为空。"
+		}
+	},
+	"unifiedPublisher": {
+		"dialogTitle": "发布到歌词数据库 (双重发布)",
+		"dialogDescription": "一键将您的同步歌词同时发布到公开的 LRCLIB 数据库及 Unison (Better Lyrics) 歌词库。",
+		"permanentNote": "发布到 LRCLIB 与 Unison 的歌词为公开内容，提交后将立即可供播放器与用户使用。",
+		"batchFinished": "发布请求处理完毕，请在上方查看各数据库的提交状态。",
+		"publishButton": "发布到选中的数据库",
+		"fields": {
+			"song": "歌曲名称",
+			"artist": "歌手/艺人",
+			"album": "专辑名称",
+			"duration": "时长 (秒)",
+			"videoId": "YouTube 视频 ID (供 Unison 使用)",
+			"isrc": "ISRC",
+			"language": "语言代码"
+		},
+		"errors": {
+			"noTargetSelected": "请至少选择一个要发布的数据库。",
+			"missingMetadata": "歌曲名称和歌手为必填项。",
+			"missingDuration": "请输入有效的歌曲时长。"
 		}
 	}
 }

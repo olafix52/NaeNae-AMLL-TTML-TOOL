@@ -78,6 +78,11 @@ const FileMenuItems = () => {
 					上传到 AMLL 歌词数据库
 				</Trans>
 			</DropdownMenu.Item>
+			<DropdownMenu.Item onSelect={menu.onPublishUnified}>
+				<Trans i18nKey="topBar.menu.publishUnified">
+					发布到歌词数据库 (LRCLIB & Unison)...
+				</Trans>
+			</DropdownMenu.Item>
 			<DropdownMenu.Item onSelect={menu.onPublishToLRCLIB}>
 				<Trans i18nKey="topBar.menu.publishToLRCLIB">
 					发布到 LRCLIB...

@@ -24,6 +24,7 @@ import {
 	lyricallyImportLyricsDialogAtom,
 	publishToLRCLIBDialogAtom,
 	publishToUnisonDialogAtom,
+	publishUnifiedDialogAtom,
 } from "$/states/dialogs.ts";
 import {
 	ActiveFileKind,
@@ -43,6 +44,7 @@ export const ImportExportLyric = () => {
 	const setImportFromLRCLIBDialog = useSetAtom(importFromLRCLIBDialogAtom);
 	const setPublishToLRCLIBDialog = useSetAtom(publishToLRCLIBDialogAtom);
 	const setPublishToUnisonDialog = useSetAtom(publishToUnisonDialogAtom);
+	const setPublishUnifiedDialog = useSetAtom(publishUnifiedDialogAtom);
 	const setGeniusImportLyricsDialog = useSetAtom(geniusImportLyricsDialogAtom);
 	const setLyricallyImportDialog = useSetAtom(lyricallyImportLyricsDialogAtom);
 	const { openFile } = useFileOpener();
@@ -312,6 +314,12 @@ export const ImportExportLyric = () => {
 						)}
 					</DropdownMenu.Item>
 					<DropdownMenu.Separator />
+					<DropdownMenu.Item onClick={() => setPublishUnifiedDialog(true)}>
+						{t(
+							"topBar.menu.exportLyric.publishUnified",
+							"发布到歌词数据库 (LRCLIB & Unison)...",
+						)}
+					</DropdownMenu.Item>
 					<DropdownMenu.Item onClick={() => setPublishToLRCLIBDialog(true)}>
 						{t("topBar.menu.exportLyric.publishToLRCLIB", "发布到 LRCLIB...")}
 					</DropdownMenu.Item>

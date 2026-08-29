@@ -34,6 +34,11 @@ A feature-rich, high-performance word-by-word lyrics editor designed for the [Sp
 - **Bi-Directional Converter** — Convert seamlessly between Apple Music TTML and Lyricsfile YAML formats via the integrated Converter Dialog under *Tools → Lyricsfile (YAML) Converter*.
 - **Vocalist Role Taxonomy** — Support for rich vocal roles (*Lead, Background, Duet, Unison, Choir, Backup, etc.*) with visual role badges in the editor and dedicated toolbar toggle controls.
 
+### 🚀 Dual Lyrics Publisher (LRCLIB + Unison)
+- **Simultaneous Multi-Target Publishing** — Publish synchronized lyrics directly to both **LRCLIB** and **Unison (Better Lyrics)** at the same time with a single click from *File → Publish to Databases (LRCLIB & Unison)...* or the Export menu.
+- **Parallel Multi-Core Execution** — Concurrent execution (`Promise.allSettled`) running LRCLIB multi-threaded PoW challenge solving (15M–30M hashes/sec) and Unison ECDSA P-256 digital signing side-by-side with live independent status cards.
+- **Multi-Format Live Preview** — Live tabbed syntax previews for TTML (Word-by-word), Lyricsfile (YAML), Synced LRC, and Plain Text before submission.
+
 ### 🌐 High-Speed LRCLIB Publisher
 - **One-Click LRCLIB Publishing** — Submit your synchronized lyrics directly to the public [LRCLIB](https://lrclib.net/) database from *File → Publish to LRCLIB...* or the Export menu.
 - **Multi-Core Proof-of-Work Solver** — Sub-second challenge solving powered by multi-threaded Web Workers (`navigator.hardwareConcurrency`, up to 16 CPU threads) and hand-optimized 32-bit SHA-256 routines computing **15M–30M hashes/sec**.
